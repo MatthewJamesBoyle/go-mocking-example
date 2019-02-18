@@ -1,0 +1,19 @@
+version: '3.4'
+services:
+  summer-mongo:
+    image: mongo
+    ports:
+    - 27017:27017
+    restart: always
+    environment:
+      MONGO_INITDB_ROOT_USERNAME: root
+      MONGO_INITDB_ROOT_PASSWORD: root
+      MONGO_INITDB_DATABASE: summer
+    command: mongod --smallfiles --logpath=/dev/null # --quiet
+  summer-sql:
+    image: postgres:9.6.9-alpine
+    ports:
+    - 5432:5432
+    environment:
+      POSTGRES_PASSWORD: password1
+      POSTGRES_DB: summer
