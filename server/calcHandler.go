@@ -7,6 +7,7 @@ import (
 	"github.com/pkg/errors"
 	"net/http"
 	"strconv"
+	_ "github.com/jinzhu/gorm/dialects/postgres"
 )
 
 type CalcHandler struct {
