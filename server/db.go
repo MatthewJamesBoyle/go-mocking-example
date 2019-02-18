@@ -36,6 +36,6 @@ func (n NoSQL) saveSum(numberOne int64, numberTwo int64) error {
 	return nil
 }
 
-func (SQL) SaveResult(result string) error {
+func (s SQL) SaveResult(result string) error {
 	return nil
 }
