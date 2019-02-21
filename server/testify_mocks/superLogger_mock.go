@@ -3,7 +3,7 @@ package testify_mocks
 import "github.com/stretchr/testify/mock"
 
 type LoggerMock struct {
-	*mock.Mock
+	mock.Mock
 }
 
 func (m *LoggerMock) Log(message string) {

@@ -1,7 +1,7 @@
 package server
 
 import (
-	"github.com/gorilla/mux"
+	"encoding/json"
 	_ "github.com/jinzhu/gorm/dialects/postgres"
 	"net/http"
 	"strconv"
@@ -11,6 +11,11 @@ type CalcHandler struct {
 	Summer   SumStorer
 	Resulter ResultStorer
 	logger   SuperComplexLogger
+}
+
+type SumRequest struct {
+	First  string
+	Second string
 }
 
 func NewHandler(Resulter ResultStorer, Summer SumStorer, logger SuperComplexLogger) (*CalcHandler, error) {
@@ -24,26 +29,26 @@ func NewHandler(Resulter ResultStorer, Summer SumStorer, logger SuperComplexLogg
 }
 
 func (c *CalcHandler) AddNumbers(w http.ResponseWriter, req *http.Request) {
-	vars := mux.Vars(req)
-	fVar := vars["first"]
-	sVar := vars["second"]
-	if fVar == "" || sVar == "" {
+	var r SumRequest
+	decoder := json.NewDecoder(req.Body)
+	err := decoder.Decode(&r)
+	if r.First == "" || r.Second == "" {
 		w.WriteHeader(http.StatusBadRequest)
 		return
 	}
-	first, err := strconv.ParseInt(fVar, 10, 64)
+	first, err := strconv.ParseInt(r.First, 10, 64)
 	if err != nil {
 		w.WriteHeader(http.StatusBadRequest)
 		return
 	}
-	second, err := strconv.ParseInt(sVar, 10, 64)
+	second, err := strconv.ParseInt(r.Second, 10, 64)
 	if err != nil {
 		w.WriteHeader(http.StatusBadRequest)
 		return
 	}
 
 	result := first + second
-
+	//using testify, we get a nil pointer exception here if we don't set expectations.
 	err = c.Summer.Save(first, second)
 	if err != nil {
 		c.logger.SuperLog("SUPER LOG")
