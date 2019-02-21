@@ -10,7 +10,7 @@ type ResultStorer interface {
 }
 
 type SumStorer interface {
-	save(numberOne int64, numberTwo int64) error
+	Save(numberOne int64, numberTwo int64) error
 }
 
 type NoSQL struct {
@@ -32,7 +32,7 @@ func NewNoSQL(db *mongo.Client) NoSQL {
 	}
 }
 
-func (n NoSQL) save(numberOne int64, numberTwo int64) error {
+func (n NoSQL) Save(numberOne int64, numberTwo int64) error {
 	return nil
 }
 

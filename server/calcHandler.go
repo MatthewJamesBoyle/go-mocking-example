@@ -44,7 +44,7 @@ func (c *CalcHandler) AddNumbers(w http.ResponseWriter, req *http.Request) {
 
 	result := first + second
 
-	err = c.Summer.save(first, second)
+	err = c.Summer.Save(first, second)
 	if err != nil {
 		c.logger.SuperLog("SUPER LOG")
 		w.WriteHeader(http.StatusBadRequest)
