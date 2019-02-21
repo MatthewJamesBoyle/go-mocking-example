@@ -1,37 +1,24 @@
 package server
 
 import (
-	"database/sql"
-	"github.com/mongodb/mongo-go-driver/mongo"
 	"github.com/gorilla/mux"
-	"github.com/pkg/errors"
+	_ "github.com/jinzhu/gorm/dialects/postgres"
 	"net/http"
 	"strconv"
-	_ "github.com/jinzhu/gorm/dialects/postgres"
 )
 
 type CalcHandler struct {
-	SqlDB   SQLstorer
-	NoSqlDB MongoStorer
+	Summer   SumStorer
+	Resulter ResultStorer
+	logger   SuperComplexLogger
 }
 
-func NewHandler(sqlConString string, noSqlDbString string) (*CalcHandler, error) {
-	if sqlConString == "" || noSqlDbString == "" {
-		return nil, errors.New("no con string")
-	}
-	db, err := sql.Open("postgres", sqlConString)
-	if err != nil {
-		return nil, err
-	}
-
-	mongo, err := mongo.NewClient(noSqlDbString)
-	if err != nil {
-		return nil, err
-	}
+func NewHandler(Resulter ResultStorer, Summer SumStorer, logger SuperComplexLogger) (*CalcHandler, error) {
 
 	return &CalcHandler{
-		SqlDB:   NewSQL(db),
-		NoSqlDB: NewNoSQL(mongo),
+		Summer:   Summer,
+		Resulter: Resulter,
+		logger:   logger,
 	}, nil
 
 }
@@ -57,13 +44,14 @@ func (c *CalcHandler) AddNumbers(w http.ResponseWriter, req *http.Request) {
 
 	result := first + second
 
-	err = c.NoSqlDB.saveSum(first, second)
+	err = c.Summer.save(first, second)
 	if err != nil {
+		c.logger.SuperLog("SUPER LOG")
 		w.WriteHeader(http.StatusBadRequest)
 		return
 	}
 
-	err = c.SqlDB.SaveResult(string(result))
+	err = c.Resulter.Save(string(result))
 	if err != nil {
 		w.WriteHeader(http.StatusBadRequest)
 		return

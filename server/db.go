@@ -5,12 +5,12 @@ import (
 	"github.com/mongodb/mongo-go-driver/mongo"
 )
 
-type SQLstorer interface {
-	SaveResult(result string) error
+type ResultStorer interface {
+	Save(result string) error
 }
 
-type MongoStorer interface {
-	saveSum(numberOne int64, numberTwo int64) error
+type SumStorer interface {
+	save(numberOne int64, numberTwo int64) error
 }
 
 type NoSQL struct {
@@ -32,10 +32,10 @@ func NewNoSQL(db *mongo.Client) NoSQL {
 	}
 }
 
-func (n NoSQL) saveSum(numberOne int64, numberTwo int64) error {
+func (n NoSQL) save(numberOne int64, numberTwo int64) error {
 	return nil
 }
 
-func (s SQL) SaveResult(result string) error {
+func (s SQL) Save(result string) error {
 	return nil
 }
