@@ -2,9 +2,10 @@ package server
 
 import (
 	"encoding/json"
-	_ "github.com/jinzhu/gorm/dialects/postgres"
 	"net/http"
 	"strconv"
+
+	_ "github.com/jinzhu/gorm/dialects/postgres"
 )
 
 type CalcHandler struct {
@@ -14,8 +15,8 @@ type CalcHandler struct {
 }
 
 type SumRequest struct {
-	First  string
-	Second string
+	First  string `json:"first"`
+	Second string `json:"second"`
 }
 
 func NewHandler(Resulter ResultStorer, Summer SumStorer, logger SuperComplexLogger) (*CalcHandler, error) {
@@ -31,6 +32,7 @@ func NewHandler(Resulter ResultStorer, Summer SumStorer, logger SuperComplexLogg
 func (c *CalcHandler) AddNumbers(w http.ResponseWriter, req *http.Request) {
 	var r SumRequest
 	decoder := json.NewDecoder(req.Body)
+
 	err := decoder.Decode(&r)
 	if r.First == "" || r.Second == "" {
 		w.WriteHeader(http.StatusBadRequest)
