@@ -1,7 +1,10 @@
+//go:generate mockgen -package server -source=supercomplexlogger.go -destination gomock_mocks/supercomplexlogger_mock.go
+
 package server
 
 import (
 	"fmt"
+
 	"github.com/pkg/errors"
 )
 

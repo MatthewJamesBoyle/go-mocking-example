@@ -1,7 +1,10 @@
+//go:generate mockgen -package server -source=db.go -destination gomock_mocks/db_mock.go
+
 package server
 
 import (
 	"database/sql"
+
 	"github.com/mongodb/mongo-go-driver/mongo"
 )
 
