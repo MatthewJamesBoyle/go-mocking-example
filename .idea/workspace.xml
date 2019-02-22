@@ -2,13 +2,10 @@
 <project version="4">
   <component name="ChangeListManager">
     <list default="true" id="205ecb04-681e-4b02-bdc7-3986df83b0e8" name="Default Changelist" comment="">
+      <change afterPath="$PROJECT_DIR$/server/calcHandlerTestify_test.go" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/server/calcHandler.go" beforeDir="false" afterPath="$PROJECT_DIR$/server/calcHandler.go" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/server/calcHandler_test.go" beforeDir="false" afterPath="$PROJECT_DIR$/server/calcHandler_test.go" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/server/routes.go" beforeDir="false" afterPath="$PROJECT_DIR$/server/routes.go" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/server/testify_mocks/resulter_mock.go" beforeDir="false" afterPath="$PROJECT_DIR$/server/testify_mocks/resulter_mock.go" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/server/testify_mocks/summer_mock.go" beforeDir="false" afterPath="$PROJECT_DIR$/server/testify_mocks/summer_mock.go" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/server/testify_mocks/superLogger_mock.go" beforeDir="false" afterPath="$PROJECT_DIR$/server/testify_mocks/superLogger_mock.go" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/server/calcHandler.go" beforeDir="false" afterPath="$PROJECT_DIR$/server/calcHandlerTestify.go" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/server/calcHandler_test.go" beforeDir="false" afterPath="$PROJECT_DIR$/server/calcHandlerNoFramework_test.go" afterDir="false" />
     </list>
     <option name="EXCLUDED_CONVERTED_TO_IGNORED" value="true" />
     <option name="SHOW_DIALOG" value="false" />
@@ -28,25 +25,25 @@
       </usages-collector>
       <usages-collector id="statistics.file.extensions.open">
         <counts>
-          <entry key="go" value="35" />
+          <entry key="go" value="44" />
           <entry key="yml" value="3" />
         </counts>
       </usages-collector>
       <usages-collector id="statistics.file.types.open">
         <counts>
-          <entry key="Go" value="35" />
+          <entry key="Go" value="44" />
           <entry key="YAML" value="3" />
         </counts>
       </usages-collector>
       <usages-collector id="statistics.file.extensions.edit">
         <counts>
-          <entry key="go" value="3632" />
+          <entry key="go" value="4388" />
           <entry key="yml" value="42" />
         </counts>
       </usages-collector>
       <usages-collector id="statistics.file.types.edit">
         <counts>
-          <entry key="Go" value="3632" />
+          <entry key="Go" value="4388" />
           <entry key="YAML" value="42" />
         </counts>
       </usages-collector>
@@ -54,41 +51,41 @@
   </component>
   <component name="FileEditorManager">
     <leaf SIDE_TABS_SIZE_LIMIT_KEY="300">
-      <file pinned="false" current-in-tab="false">
-        <entry file="file://$PROJECT_DIR$/server/calcHandler.go">
-          <provider selected="true" editor-type-id="text-editor">
-            <state relative-caret-position="121">
-              <caret line="53" selection-start-line="53" selection-end-line="53" />
-            </state>
-          </provider>
-        </entry>
-      </file>
       <file pinned="false" current-in-tab="true">
-        <entry file="file://$PROJECT_DIR$/server/calcHandler_test.go">
+        <entry file="file://$PROJECT_DIR$/server/calcHandlerNoFramework_test.go">
           <provider selected="true" editor-type-id="text-editor">
-            <state relative-caret-position="185">
-              <caret line="50" column="75" selection-start-line="50" selection-start-column="75" selection-end-line="50" selection-end-column="75" />
+            <state relative-caret-position="268">
+              <caret line="72" column="38" selection-start-line="72" selection-start-column="38" selection-end-line="72" selection-end-column="38" />
               <folding>
-                <element signature="e#16#108#0" expanded="true" />
+                <element signature="e#16#286#0" expanded="true" />
               </folding>
             </state>
           </provider>
         </entry>
       </file>
       <file pinned="false" current-in-tab="false">
-        <entry file="file://$PROJECT_DIR$/server/testify_mocks/superLogger_mock.go">
+        <entry file="file://$PROJECT_DIR$/server/no_framework_mocks/SuperComplexLogger.go">
           <provider selected="true" editor-type-id="text-editor">
-            <state relative-caret-position="210">
-              <caret line="14" column="13" selection-start-line="14" selection-start-column="13" selection-end-line="14" selection-end-column="13" />
+            <state relative-caret-position="30">
+              <caret line="2" column="32" selection-start-line="2" selection-start-column="32" selection-end-line="2" selection-end-column="32" />
             </state>
           </provider>
         </entry>
       </file>
       <file pinned="false" current-in-tab="false">
-        <entry file="file:///usr/local/Cellar/go/1.11.2/libexec/src/runtime/extern.go">
+        <entry file="file://$PROJECT_DIR$/server/no_framework_mocks/Summer.go">
           <provider selected="true" editor-type-id="text-editor">
-            <state relative-caret-position="185">
-              <caret line="194" selection-start-line="194" selection-end-line="194" />
+            <state relative-caret-position="90">
+              <caret line="6" column="8" selection-start-line="6" selection-start-column="8" selection-end-line="6" selection-end-column="8" />
+            </state>
+          </provider>
+        </entry>
+      </file>
+      <file pinned="false" current-in-tab="false">
+        <entry file="file://$PROJECT_DIR$/server/no_framework_mocks/Resulter.go">
+          <provider selected="true" editor-type-id="text-editor">
+            <state relative-caret-position="135">
+              <caret line="9" lean-forward="true" selection-start-line="9" selection-end-line="9" />
             </state>
           </provider>
         </entry>
@@ -127,6 +124,10 @@
         <option value="$PROJECT_DIR$/server/testify_mocks/resulter_mock.go" />
         <option value="$PROJECT_DIR$/server/testify_mocks/superLogger_mock.go" />
         <option value="$PROJECT_DIR$/server/calcHandler_test.go" />
+        <option value="$PROJECT_DIR$/server/no_framework_mocks/Resulter.go" />
+        <option value="$PROJECT_DIR$/server/no_framework_mocks/Summer.go" />
+        <option value="$PROJECT_DIR$/server/no_framework_mocks/SuperComplexLogger.go" />
+        <option value="$PROJECT_DIR$/server/calcHandlerNoFramework_test.go" />
       </list>
     </option>
   </component>
@@ -164,7 +165,7 @@
               <item name="mocking-example" type="b2602c69:ProjectViewProjectNode" />
               <item name="mocking-example" type="462c0819:PsiDirectoryNode" />
               <item name="server" type="462c0819:PsiDirectoryNode" />
-              <item name="testify_mocks" type="462c0819:PsiDirectoryNode" />
+              <item name="no_framework_mocks" type="462c0819:PsiDirectoryNode" />
             </path>
           </expand>
           <select />
@@ -183,6 +184,7 @@
   </component>
   <component name="RecentsManager">
     <key name="CopyFile.RECENT_KEYS">
+      <recent name="$PROJECT_DIR$/server" />
       <recent name="$PROJECT_DIR$/server/testify_mocks" />
     </key>
   </component>
@@ -198,7 +200,7 @@
       </list>
     </option>
   </component>
-  <component name="RunManager" selected="Go Test.go test github.com/MatthewJamesBoyle/mocking-example/server">
+  <component name="RunManager" selected="Go Test.go test mocking-example">
     <configuration name="Unnamed" type="GoApplicationRunConfiguration" factoryName="Go Application">
       <module name="mocking-example" />
       <working_directory value="$PROJECT_DIR$/" />
@@ -209,7 +211,7 @@
       <directory value="$PROJECT_DIR$/" />
       <method v="2" />
     </configuration>
-    <configuration name="TestCalcHandler_AddNumbers in github.com/MatthewJamesBoyle/mocking-example/server" type="GoTestRunConfiguration" factoryName="Go Test" temporary="true" nameIsGenerated="true">
+    <configuration name="TestCalcHandler_AddNumbers_No_Mock in github.com/MatthewJamesBoyle/mocking-example/server" type="GoTestRunConfiguration" factoryName="Go Test" temporary="true" nameIsGenerated="true">
       <module name="mocking-example" />
       <working_directory value="$PROJECT_DIR$/server" />
       <framework value="gotest" />
@@ -217,10 +219,10 @@
       <package value="github.com/MatthewJamesBoyle/mocking-example/server" />
       <directory value="$PROJECT_DIR$/" />
       <filePath value="$PROJECT_DIR$/" />
-      <pattern value="^TestCalcHandler_AddNumbers$" />
+      <pattern value="^TestCalcHandler_AddNumbers_No_Mock$" />
       <method v="2" />
     </configuration>
-    <configuration name="TestCalcHandler_AddNumbers/200_if_successful_request in github.com/MatthewJamesBoyle/mocking-example/server" type="GoTestRunConfiguration" factoryName="Go Test" temporary="true" nameIsGenerated="true">
+    <configuration name="TestCalcHandler_AddNumbers_No_Mock/400_and_log_if_mongo_db_fails in github.com/MatthewJamesBoyle/mocking-example/server" type="GoTestRunConfiguration" factoryName="Go Test" temporary="true" nameIsGenerated="true">
       <module name="mocking-example" />
       <working_directory value="$PROJECT_DIR$/server" />
       <framework value="gotest" />
@@ -228,10 +230,10 @@
       <package value="github.com/MatthewJamesBoyle/mocking-example/server" />
       <directory value="$PROJECT_DIR$/" />
       <filePath value="$PROJECT_DIR$/" />
-      <pattern value="^TestCalcHandler_AddNumbers$/^200_if_successful_request$" />
+      <pattern value="^TestCalcHandler_AddNumbers_No_Mock$/^400_and_log_if_mongo_db_fails$" />
       <method v="2" />
     </configuration>
-    <configuration name="TestCalcHandler_AddNumbers/400_if_sql_db_fails in github.com/MatthewJamesBoyle/mocking-example/server" type="GoTestRunConfiguration" factoryName="Go Test" temporary="true" nameIsGenerated="true">
+    <configuration name="TestCalcHandler_AddNumbers_No_Mock/400_and_log_if_sql_db_fails in github.com/MatthewJamesBoyle/mocking-example/server" type="GoTestRunConfiguration" factoryName="Go Test" temporary="true" nameIsGenerated="true">
       <module name="mocking-example" />
       <working_directory value="$PROJECT_DIR$/server" />
       <framework value="gotest" />
@@ -239,7 +241,7 @@
       <package value="github.com/MatthewJamesBoyle/mocking-example/server" />
       <directory value="$PROJECT_DIR$/" />
       <filePath value="$PROJECT_DIR$/" />
-      <pattern value="^TestCalcHandler_AddNumbers$/^400_if_sql_db_fails$" />
+      <pattern value="^TestCalcHandler_AddNumbers_No_Mock$/^400_and_log_if_sql_db_fails$" />
       <method v="2" />
     </configuration>
     <configuration name="go test github.com/MatthewJamesBoyle/mocking-example/server" type="GoTestRunConfiguration" factoryName="Go Test" temporary="true" nameIsGenerated="true">
@@ -252,41 +254,35 @@
       <filePath value="$PROJECT_DIR$/" />
       <method v="2" />
     </configuration>
+    <configuration name="go test mocking-example" type="GoTestRunConfiguration" factoryName="Go Test" temporary="true" nameIsGenerated="true">
+      <module name="mocking-example" />
+      <working_directory value="$PROJECT_DIR$" />
+      <framework value="gotest" />
+      <kind value="DIRECTORY" />
+      <package value="github.com/MatthewJamesBoyle/mocking-example" />
+      <directory value="$PROJECT_DIR$" />
+      <filePath value="$PROJECT_DIR$/" />
+      <method v="2" />
+    </configuration>
     <list>
       <item itemvalue="Go Build.Unnamed" />
-      <item itemvalue="Go Test.TestCalcHandler_AddNumbers/200_if_successful_request in github.com/MatthewJamesBoyle/mocking-example/server" />
-      <item itemvalue="Go Test.TestCalcHandler_AddNumbers in github.com/MatthewJamesBoyle/mocking-example/server" />
-      <item itemvalue="Go Test.TestCalcHandler_AddNumbers/400_if_sql_db_fails in github.com/MatthewJamesBoyle/mocking-example/server" />
       <item itemvalue="Go Test.go test github.com/MatthewJamesBoyle/mocking-example/server" />
+      <item itemvalue="Go Test.TestCalcHandler_AddNumbers_No_Mock in github.com/MatthewJamesBoyle/mocking-example/server" />
+      <item itemvalue="Go Test.TestCalcHandler_AddNumbers_No_Mock/400_and_log_if_sql_db_fails in github.com/MatthewJamesBoyle/mocking-example/server" />
+      <item itemvalue="Go Test.TestCalcHandler_AddNumbers_No_Mock/400_and_log_if_mongo_db_fails in github.com/MatthewJamesBoyle/mocking-example/server" />
+      <item itemvalue="Go Test.go test mocking-example" />
     </list>
     <recent_temporary>
       <list>
+        <item itemvalue="Go Test.go test mocking-example" />
         <item itemvalue="Go Test.go test github.com/MatthewJamesBoyle/mocking-example/server" />
-        <item itemvalue="Go Test.TestCalcHandler_AddNumbers/400_if_sql_db_fails in github.com/MatthewJamesBoyle/mocking-example/server" />
-        <item itemvalue="Go Test.TestCalcHandler_AddNumbers/200_if_successful_request in github.com/MatthewJamesBoyle/mocking-example/server" />
-        <item itemvalue="Go Test.TestCalcHandler_AddNumbers in github.com/MatthewJamesBoyle/mocking-example/server" />
+        <item itemvalue="Go Test.TestCalcHandler_AddNumbers_No_Mock/400_and_log_if_mongo_db_fails in github.com/MatthewJamesBoyle/mocking-example/server" />
+        <item itemvalue="Go Test.TestCalcHandler_AddNumbers_No_Mock/400_and_log_if_sql_db_fails in github.com/MatthewJamesBoyle/mocking-example/server" />
+        <item itemvalue="Go Test.TestCalcHandler_AddNumbers_No_Mock in github.com/MatthewJamesBoyle/mocking-example/server" />
       </list>
     </recent_temporary>
   </component>
   <component name="TestHistory">
-    <history-entry file="TestCalcHandler_AddNumbers_400_if_sql_db_fails_in_github_com_MatthewJamesBoyle_mocking-example_server - 2019.02.21 at 19h 04m 36s.xml">
-      <configuration name="TestCalcHandler_AddNumbers/400_if_sql_db_fails in github.com/MatthewJamesBoyle/mocking-example/server" configurationId="GoTestRunConfiguration" />
-    </history-entry>
-    <history-entry file="TestCalcHandler_AddNumbers_400_if_sql_db_fails_in_github_com_MatthewJamesBoyle_mocking-example_server - 2019.02.21 at 19h 05m 02s.xml">
-      <configuration name="TestCalcHandler_AddNumbers/400_if_sql_db_fails in github.com/MatthewJamesBoyle/mocking-example/server" configurationId="GoTestRunConfiguration" />
-    </history-entry>
-    <history-entry file="TestCalcHandler_AddNumbers_400_if_sql_db_fails_in_github_com_MatthewJamesBoyle_mocking-example_server - 2019.02.21 at 19h 05m 26s.xml">
-      <configuration name="TestCalcHandler_AddNumbers/400_if_sql_db_fails in github.com/MatthewJamesBoyle/mocking-example/server" configurationId="GoTestRunConfiguration" />
-    </history-entry>
-    <history-entry file="TestCalcHandler_AddNumbers_400_if_sql_db_fails_in_github_com_MatthewJamesBoyle_mocking-example_server - 2019.02.21 at 19h 05m 54s.xml">
-      <configuration name="TestCalcHandler_AddNumbers/400_if_sql_db_fails in github.com/MatthewJamesBoyle/mocking-example/server" configurationId="GoTestRunConfiguration" />
-    </history-entry>
-    <history-entry file="TestCalcHandler_AddNumbers_400_if_sql_db_fails_in_github_com_MatthewJamesBoyle_mocking-example_server - 2019.02.21 at 19h 06m 09s.xml">
-      <configuration name="TestCalcHandler_AddNumbers/400_if_sql_db_fails in github.com/MatthewJamesBoyle/mocking-example/server" configurationId="GoTestRunConfiguration" />
-    </history-entry>
-    <history-entry file="TestCalcHandler_AddNumbers_400_if_sql_db_fails_in_github_com_MatthewJamesBoyle_mocking-example_server - 2019.02.21 at 19h 08m 13s.xml">
-      <configuration name="TestCalcHandler_AddNumbers/400_if_sql_db_fails in github.com/MatthewJamesBoyle/mocking-example/server" configurationId="GoTestRunConfiguration" />
-    </history-entry>
     <history-entry file="TestCalcHandler_AddNumbers_400_if_sql_db_fails_in_github_com_MatthewJamesBoyle_mocking-example_server - 2019.02.21 at 19h 08m 48s.xml">
       <configuration name="TestCalcHandler_AddNumbers/400_if_sql_db_fails in github.com/MatthewJamesBoyle/mocking-example/server" configurationId="GoTestRunConfiguration" />
     </history-entry>
@@ -299,6 +295,24 @@
     <history-entry file="TestCalcHandler_AddNumbers_400_if_sql_db_fails_in_github_com_MatthewJamesBoyle_mocking-example_server - 2019.02.21 at 19h 11m 45s.xml">
       <configuration name="TestCalcHandler_AddNumbers/400_if_sql_db_fails in github.com/MatthewJamesBoyle/mocking-example/server" configurationId="GoTestRunConfiguration" />
     </history-entry>
+    <history-entry file="TestCalcHandler_AddNumbers_400_if_sql_db_fails_in_github_com_MatthewJamesBoyle_mocking-example_server - 2019.02.21 at 19h 12m 17s.xml">
+      <configuration name="TestCalcHandler_AddNumbers/400_if_sql_db_fails in github.com/MatthewJamesBoyle/mocking-example/server" configurationId="GoTestRunConfiguration" />
+    </history-entry>
+    <history-entry file="go_test_github_com_MatthewJamesBoyle_mocking-example_server - 2019.02.21 at 19h 12m 37s.xml">
+      <configuration name="go test github.com/MatthewJamesBoyle/mocking-example/server" configurationId="GoTestRunConfiguration" />
+    </history-entry>
+    <history-entry file="TestCalcHandler_AddNumbers_No_Mock_in_github_com_MatthewJamesBoyle_mocking-example_server - 2019.02.22 at 10h 51m 57s.xml">
+      <configuration name="TestCalcHandler_AddNumbers_No_Mock in github.com/MatthewJamesBoyle/mocking-example/server" configurationId="GoTestRunConfiguration" />
+    </history-entry>
+    <history-entry file="TestCalcHandler_AddNumbers_No_Mock_in_github_com_MatthewJamesBoyle_mocking-example_server - 2019.02.22 at 10h 52m 02s.xml">
+      <configuration name="TestCalcHandler_AddNumbers_No_Mock in github.com/MatthewJamesBoyle/mocking-example/server" configurationId="GoTestRunConfiguration" />
+    </history-entry>
+    <history-entry file="TestCalcHandler_AddNumbers_No_Mock_400_and_log_if_sql_db_fails_in_github_com_MatthewJamesBoyle_mocking-example_server - 2019.02.22 at 10h 53m 05s.xml">
+      <configuration name="TestCalcHandler_AddNumbers_No_Mock/400_and_log_if_sql_db_fails in github.com/MatthewJamesBoyle/mocking-example/server" configurationId="GoTestRunConfiguration" />
+    </history-entry>
+    <history-entry file="go_test_github_com_MatthewJamesBoyle_mocking-example_server - 2019.02.22 at 10h 54m 49s.xml">
+      <configuration name="go test github.com/MatthewJamesBoyle/mocking-example/server" configurationId="GoTestRunConfiguration" />
+    </history-entry>
   </component>
   <component name="ToolWindowManager">
     <frame x="0" y="23" width="1440" height="800" extended-state="6" />
@@ -309,7 +323,7 @@
       <window_info id="Favorites" order="2" side_tool="true" />
       <window_info anchor="bottom" id="Message" order="0" />
       <window_info anchor="bottom" id="Find" order="1" />
-      <window_info active="true" anchor="bottom" id="Run" order="2" visible="true" weight="0.32909605" />
+      <window_info anchor="bottom" id="Run" order="2" weight="0.32909605" />
       <window_info anchor="bottom" id="Debug" order="3" weight="0.3997175" />
       <window_info anchor="bottom" id="Cvs" order="4" weight="0.25" />
       <window_info anchor="bottom" id="Inspection" order="5" weight="0.4" />
@@ -335,19 +349,19 @@
     <breakpoint-manager>
       <breakpoints>
         <line-breakpoint enabled="true" type="DlvLineBreakpoint">
-          <url>file://$PROJECT_DIR$/server/calcHandler.go</url>
+          <url>file://$PROJECT_DIR$/server/calcHandlerTestify.go</url>
           <line>30</line>
           <properties />
           <option name="timeStamp" value="3" />
         </line-breakpoint>
         <line-breakpoint enabled="true" type="DlvLineBreakpoint">
-          <url>file://$PROJECT_DIR$/server/calcHandler_test.go</url>
+          <url>file://$PROJECT_DIR$/server/calcHandlerTestify_test.go</url>
           <line>42</line>
           <properties />
           <option name="timeStamp" value="14" />
         </line-breakpoint>
         <line-breakpoint enabled="true" type="DlvLineBreakpoint">
-          <url>file://$PROJECT_DIR$/server/calcHandler.go</url>
+          <url>file://$PROJECT_DIR$/server/calcHandlerTestify.go</url>
           <line>53</line>
           <properties />
           <option name="timeStamp" value="16" />
@@ -377,13 +391,6 @@
         </state>
       </provider>
     </entry>
-    <entry file="file://$PROJECT_DIR$/server/db.go">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="135">
-          <caret line="12" column="5" selection-start-line="12" selection-start-column="5" selection-end-line="12" selection-end-column="5" />
-        </state>
-      </provider>
-    </entry>
     <entry file="file://$PROJECT_DIR$/main.go">
       <provider selected="true" editor-type-id="text-editor">
         <state relative-caret-position="240">
@@ -395,16 +402,6 @@
       <provider selected="true" editor-type-id="text-editor">
         <state relative-caret-position="90">
           <caret line="6" column="23" selection-start-line="6" selection-start-column="23" selection-end-line="6" selection-end-column="23" />
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/server/supercomplexlogger.go">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="135">
-          <caret line="9" column="13" lean-forward="true" selection-start-line="9" selection-end-line="10" />
-          <folding>
-            <element signature="e#16#58#0" expanded="true" />
-          </folding>
         </state>
       </provider>
     </entry>
@@ -464,19 +461,64 @@
         </state>
       </provider>
     </entry>
-    <entry file="file://$PROJECT_DIR$/server/calcHandler.go">
+    <entry file="file://$PROJECT_DIR$/server/calcHandlerTestify.go">
       <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="121">
+        <state relative-caret-position="591">
           <caret line="53" selection-start-line="53" selection-end-line="53" />
         </state>
       </provider>
     </entry>
-    <entry file="file://$PROJECT_DIR$/server/calcHandler_test.go">
+    <entry file="file://$PROJECT_DIR$/server/calcHandlerTestify_test.go">
       <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="185">
-          <caret line="50" column="75" selection-start-line="50" selection-start-column="75" selection-end-line="50" selection-end-column="75" />
+        <state relative-caret-position="105">
+          <caret line="7" column="4" selection-start-line="7" selection-start-column="4" selection-end-line="7" selection-end-column="4" />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/server/db.go">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="135">
+          <caret line="12" column="17" selection-start-line="12" selection-end-line="13" />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/server/supercomplexlogger.go">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="105">
+          <caret line="7" selection-start-line="7" selection-end-line="10" selection-end-column="1" />
           <folding>
-            <element signature="e#16#108#0" expanded="true" />
+            <element signature="e#16#58#0" expanded="true" />
+          </folding>
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/server/no_framework_mocks/Summer.go">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="90">
+          <caret line="6" column="8" selection-start-line="6" selection-start-column="8" selection-end-line="6" selection-end-column="8" />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/server/no_framework_mocks/Resulter.go">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="135">
+          <caret line="9" lean-forward="true" selection-start-line="9" selection-end-line="9" />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/server/no_framework_mocks/SuperComplexLogger.go">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="30">
+          <caret line="2" column="32" selection-start-line="2" selection-start-column="32" selection-end-line="2" selection-end-column="32" />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/server/calcHandlerNoFramework_test.go">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="268">
+          <caret line="72" column="38" selection-start-line="72" selection-start-column="38" selection-end-line="72" selection-end-column="38" />
+          <folding>
+            <element signature="e#16#286#0" expanded="true" />
           </folding>
         </state>
       </provider>
