@@ -1,12 +1,15 @@
 package main
 
 import (
+	"context"
 	"database/sql"
 	"fmt"
-	"github.com/MatthewJamesBoyle/mocking-example/server"
-	"github.com/mongodb/mongo-go-driver/mongo"
 	"net/http"
 	"os"
+
+	"github.com/MatthewJamesBoyle/mocking-example/server"
+	"go.mongodb.org/mongo-driver/v2/mongo"
+	"go.mongodb.org/mongo-driver/v2/mongo/options"
 )
 
 func main() {
@@ -16,9 +19,10 @@ func main() {
 
 	db, _ := sql.Open("postgres", sqlConString)
 
-	mongo, _ := mongo.NewClient(noSqlDbString)
+	mongoClient, _ := mongo.Connect(options.Client().ApplyURI(noSqlDbString))
+	defer mongoClient.Disconnect(context.Background())
 
-	resulter := server.NewNoSQL(mongo)
+	resulter := server.NewNoSQL(mongoClient)
 	summer := server.NewSQL(db)
 
 	calcHandler, err := server.NewHandler(summer, resulter, server.MattsLogger{})

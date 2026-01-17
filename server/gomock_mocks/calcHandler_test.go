@@ -7,11 +7,11 @@ import (
 	"net/http/httptest"
 	"testing"
 
-	"github.com/MatthewJamesBoyle/go-mocking-example/server"
+	"github.com/MatthewJamesBoyle/mocking-example/server"
 
-	"github.com/golang/mock/gomock"
 	"github.com/stretchr/testify/assert"
 	"github.com/stretchr/testify/require"
+	"go.uber.org/mock/gomock"
 )
 
 func TestCalcHandler_AddNumbers(t *testing.T) {
@@ -200,7 +200,7 @@ func TestCalcHandler_AddNumbers(t *testing.T) {
 		// expectations
 		gomock.InOrder(
 			mockSummer.EXPECT().Save(int64(10), int64(10)).Return(nil),
-			mockResulter.EXPECT().Save(string(int64(20))).Return(testErr),
+			mockResulter.EXPECT().Save("20").Return(testErr),
 		)
 
 		rr := httptest.NewRecorder()
@@ -240,7 +240,7 @@ func TestCalcHandler_AddNumbers(t *testing.T) {
 		// expectations
 		gomock.InOrder(
 			mockSummer.EXPECT().Save(int64(10), int64(10)).Return(nil),
-			mockResulter.EXPECT().Save(string(int64(20))).Return(nil),
+			mockResulter.EXPECT().Save("20").Return(nil),
 		)
 
 		rr := httptest.NewRecorder()
