@@ -5,7 +5,7 @@ package server
 import (
 	"database/sql"
 
-	"github.com/mongodb/mongo-go-driver/mongo"
+	"go.mongodb.org/mongo-driver/v2/mongo"
 )
 
 type ResultStorer interface {

@@ -18,7 +18,7 @@ func TestCalcHandler_AddNumbers(t *testing.T) {
 		mockSummer := new(testify_mocks.SummerMock)
 		mockResulter := new(testify_mocks.ResulterMock)
 		mockSummer.On("Save", int64(3), int64(40)).Return(nil)
-		mockResulter.On("Save", string(43)).Return(nil)
+		mockResulter.On("Save", "43").Return(nil)
 		handler, err := NewHandler(mockResulter, mockSummer, mockLogger)
 		require.NoError(t, err)
 		rr := httptest.NewRecorder()
@@ -32,7 +32,7 @@ func TestCalcHandler_AddNumbers(t *testing.T) {
 		mockSummer := new(testify_mocks.SummerMock)
 		mockResulter := new(testify_mocks.ResulterMock)
 		mockSummer.On("Save", int64(3), int64(40)).Return(errors.New("some-error"))
-		mockResulter.On("Save", string(43)).Return(nil)
+		mockResulter.On("Save", "43").Return(nil)
 		mockLogger.On("SuperLog", mock.Anything).Return("", 1, 1, nil)
 
 		handler, err := NewHandler(mockResulter, mockSummer, mockLogger)
@@ -48,7 +48,7 @@ func TestCalcHandler_AddNumbers(t *testing.T) {
 		mockSummer := new(testify_mocks.SummerMock)
 		mockResulter := new(testify_mocks.ResulterMock)
 		mockSummer.On("Save", int64(3), int64(40)).Return(nil)
-		mockResulter.On("Save", string(43)).Return(errors.New("some-error"))
+		mockResulter.On("Save", "43").Return(errors.New("some-error"))
 		mockLogger.On("SuperLog", mock.Anything).Return("", 1, 1, nil)
 
 		handler, err := NewHandler(mockResulter, mockSummer, mockLogger)

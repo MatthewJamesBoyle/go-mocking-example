@@ -5,8 +5,9 @@
 package server
 
 import (
-	gomock "github.com/golang/mock/gomock"
 	reflect "reflect"
+
+	gomock "go.uber.org/mock/gomock"
 )
 
 // MockResultStorer is a mock of ResultStorer interface

@@ -5,7 +5,7 @@ import (
 	"net/http"
 	"strconv"
 
-	_ "github.com/jinzhu/gorm/dialects/postgres"
+	_ "github.com/lib/pq"
 )
 
 type CalcHandler struct {
@@ -58,7 +58,7 @@ func (c *CalcHandler) AddNumbers(w http.ResponseWriter, req *http.Request) {
 		return
 	}
 
-	err = c.Resulter.Save(string(result))
+	err = c.Resulter.Save(strconv.FormatInt(result, 10))
 	if err != nil {
 		w.WriteHeader(http.StatusBadRequest)
 		return
